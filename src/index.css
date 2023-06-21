@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.parent-div{display: flex;align-items: center; gap: 3rem;}
+
+.div{border-radius: 5px; margin-bottom: 2px; border:2px solid black;}
+
+.div-wrapper{height: 3rem; z-index: 2;padding: 1rem; overflow: auto;border: 1px solid grey;}
+
+.div1{background-color:blue;}
+.div2{background-color:red;}
+.div3{background-color:green;}
+.div4{background-color:purple;}
+.colored-input{padding: 1rem;font-size: medium;}

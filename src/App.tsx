@@ -1,12 +1,13 @@
 import React, { MouseEventHandler, SetStateAction, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Parent from './Parent';
 
 interface colorProps {
 
 }
 function App() {
-  const [selectedColor, setSelectedColor] = useState('')
+  const [selectedColor, setSelectedColor] = useState('');
   const colorChangeHandler = (e: any) => {
     setSelectedColor(e.target.value)
   }
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <div className="App-header" style={{ background: selectedColor }}>
         <h1>Choose Color</h1>
+
         <div className='parent-div'>
           <div>
             <label htmlFor="blue">Blue</label>
@@ -37,13 +39,18 @@ function App() {
             <div className='div div4' id='purple'>Purple</div>
           </div>
 
-          <input type='text' placeholder='your color..' className='colored-input' onChange={colorChangeHandler}/>
-          <input type='color' placeholder='your color..' className='color-type' onChange={colorChangeHandler}/>
+          <input type='text' placeholder='your color..' className='colored-input' onChange={colorChangeHandler} />
+          <input type='color' placeholder='your color..' className='color-type' onChange={colorChangeHandler} />
 
         </div>
+       
+        <Parent />
       </div>
+
     </div>
   );
 }
 
 export default App;
+
+
